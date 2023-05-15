@@ -1,0 +1,19 @@
+/* header */
+#header h1 {}
+#header p {}
+
+/* main */
+#container {}
+.main {}
+.main .work {}
+.main .w1 {}
+.main .w2 {}
+.main .w3 {}
+.main .w4 {}
+.main .w5 {}
+
+/* footer */
+#footer {
+    position: fixed;
+    bottom: 0;
+}
