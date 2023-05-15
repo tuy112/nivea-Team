@@ -10,41 +10,42 @@
     <script type="text/javascript">
       $(document).ready(function () {
         emailjs.init("FhBDdklrwtHsn51F2");
-        //"user_xxxxx"이 부분은 사용자마다 다르니 반드시 emailJS의 installation 화면을 확인
-        $("input[name=submit]").click(function () {
-          var templateParams = {
-            //각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
-            name: $("input[name=user_name]").val(),
-            phone: $("input[name=contact_number]").val(),
-            email: $("input[name=user_email]").val(),
-            message: $("textarea[name=message]").val(),
-          };
 
-          emailjs
-            .send("gmail", "template_vdqsj88", templateParams)
-            //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
-            .then(
-              function (response) {
-                console.log("SUCCESS!", response.status, response.text);
-              },
-              function (error) {
-                console.log("FAILED...", error);
-              }
-            );
+        $("#contact-form").on("submit", function (event) {
+          event.preventDefault(); // prevent reload
+          console.log("a");
+          const formData = new FormData(this);
+          formData.append("service_id", "service_s6l8dom");
+          formData.append("template_id", "template_vdqsj88");
+          formData.append("user_id", "FhBDdklrwtHsn51F2");
+
+          $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
+            type: "POST",
+            data: formData,
+            contentType: false, // auto-detection
+            processData: false, // no need to parse formData to string
+          })
+            .done(function () {
+              alert("Your mail is sent!");
+            })
+            .fail(function (error) {
+              alert("Oops... " + JSON.stringify(error));
+            });
         });
       });
     </script>
   </head>
   <body>
     <form id="contact-form">
-      <input type="hidden" name="contact_number" />
+      <label>phone(필수아님)</label>
+      <input type="text" name="phone" />
       <label>Name</label>
-      <input type="text" name="user_name" />
+      <input type="text" name="name" />
       <label>Email</label>
-      <input type="email" name="user_email" />
+      <input type="email" name="email" />
       <label>Message</label>
       <textarea name="message"></textarea>
-      <input type="button" name="submit" class="btn white" value="메일보내기" />
+      <button name="submit" class="btn white">전송</button>
     </form>
   </body>
 </html>
