@@ -1,12 +1,40 @@
 /* header */
+* {
+    cursor: default;
+}
+
+#header {
+    margin-bottom: 50px;
+}
 #header h1 {}
-#header p {}
+#header p {
+    margin-top: -20px;
+}
+
+#header .nav ul li {
+    list-style: none;
+}
+#header .nav ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: 1s;
+    font-weight: 600;
+}
+#header .nav ul li a:hover {
+    text-decoration: underline;
+}
 
 /* main */
-#container {}
+#container {
+    height: 100%;
+}
 .main {}
 .main .work {}
 .main .w1 {}
+.main .w1 h3.span { 
+    font-size: 10px;
+    
+}
 .main .w2 {}
 .main .w3 {}
 .main .w4 {}
@@ -16,4 +44,9 @@
 #footer {
     position: fixed;
     bottom: 0;
+    width: 100%;
+    background: #333;
+}
+#footer p {
+    color: #fff;
 }
