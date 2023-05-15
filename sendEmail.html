@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Form</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        emailjs.init("FhBDdklrwtHsn51F2");
+        //"user_xxxxx"이 부분은 사용자마다 다르니 반드시 emailJS의 installation 화면을 확인
+        $("input[name=submit]").click(function () {
+          var templateParams = {
+            //각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
+            name: $("input[name=user_name]").val(),
+            phone: $("input[name=contact_number]").val(),
+            email: $("input[name=user_email]").val(),
+            message: $("textarea[name=message]").val(),
+          };
+
+          emailjs
+            .send("gmail", "template_vdqsj88", templateParams)
+            //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
+            .then(
+              function (response) {
+                console.log("SUCCESS!", response.status, response.text);
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form id="contact-form">
+      <input type="hidden" name="contact_number" />
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Message</label>
+      <textarea name="message"></textarea>
+      <input type="button" name="submit" class="btn white" value="메일보내기" />
+    </form>
+  </body>
+</html>
