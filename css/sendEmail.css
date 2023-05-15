@@ -1,0 +1,12 @@
+.title-wrap {
+  width: fit-content;
+  margin: 20px auto;
+}
+.form-wrap {
+  width: 75%;
+  max-width: 48rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
