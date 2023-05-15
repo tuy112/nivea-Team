@@ -4,6 +4,7 @@
 }
 #header {
     margin-bottom: 90px;
+    text-align: center;
 }
 #header h1 {}
 #header p {
@@ -28,28 +29,55 @@
 #container {
     height: 100%;
 }
-.main {}
-.main .work { 
+.main {
     text-align: center;
-    margin-bottom: 50px;
+    line-height: 1.7;
 }
-.main .work h3 {}
-.main .work p {
-    margin-top: -10px;
-    margin-bottom: 20px;
+.main .go  {
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: 0.3s;
 }
-
-.main .w1 {}
-.main .w2 {}
-.main .w3 {}
-.main .w4 {}
-.main .w5 {}
+.main .go.hover {
+    background: #333;
+    color: #fff;
+}
+.top { 
+    display: flex;
+    margin: 10px;
+}
+.bottom {
+    display: flex;
+    margin: 10px;
+}
+.topDiv{
+    width: 100%;
+    height: 200px;
+    background: #f0f0f0;
+    border: 1px solid #333;
+    box-sizing: border-box;
+}
+.bottomDiv{
+    width: 100%;
+    height: 200px;
+    background: #e0e0e0;
+    border: 1px solid #333;
+    box-sizing: border-box;
+}
 
 .main .feature {}
 .main .goal {}
 .main .promise {}
 
 /* footer */
+#footer {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+}
 #footer p { 
     font-weight: 600;
     text-align: right;
