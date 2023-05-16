@@ -1,0 +1,78 @@
+* {
+  font-family: "Noto Serif KR", serif;
+}
+.mypic {
+  width: 100%;
+  height: 300px;
+
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://s3.ap-northeast-2.amazonaws.com/blog.spartacodingclub.kr/s_220503_1.png");
+  background-position: center 30%;
+  background-size: cover;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mypost {
+  width: 95%;
+  max-width: 500px;
+  margin: 20px auto 20px auto;
+
+  box-shadow: 0px 0px 3px 0px black;
+  padding: 20px;
+}
+
+.mypost > button {
+  margin-top: 15px;
+}
+
+.mycards {
+  width: 95%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.mycards > .card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+input::placeholder {
+  color: black;
+}
+.card-body {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  border-radius: 10px;
+}
+#group,
+#name {
+  text-align: center;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  border: 1px solid grey;
+}
+.mypost {
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+.input-group {
+  display: flex;
+  justify-content: center;
+}
+.button_box {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.delete_button_box {
+  float: right;
+}
+.blockquote {
+  font-size: 15px;
+}
