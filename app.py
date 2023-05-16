@@ -1,15 +1,25 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, jsonify, request, json
 app = Flask(__name__)
-​
-​
+
 from pymongo import MongoClient
+
 client = MongoClient('mongodb+srv://sparta:test@sparta.mw5zmbb.mongodb.net/?retryWrites=true&w=majority')
-db = client.dbsparta
-​
+
+db = client.dbsprata
+
 @app.route('/')
 def home():
-   return render_template('comment.html')
-​
+    return render_template('index.html')
+
+@app.route('/sendEmail')
+def contact():
+    return render_template('sendEmail.html')
+
+@app.route('/comment')
+def comment():
+    return render_template('comment.html')
+
+# comment
 @app.route("/guestbook", methods=["POST"])
 def guestbook_post():
     name_receive = request.form['name_give']
@@ -21,13 +31,14 @@ def guestbook_post():
         'group':group_receive
     }
     db.fanm.insert_one(doc)
-   
-    return jsonify({'msg': '응원 저장 완료!'})
-​
-@app.route("/guestbook", methods=["GET"])
+
+    return jsonify({'msg': '응원 저장 완료'})
+
+@app.route('/guestbook', methods=['GET'])
 def guestbook_get():
-    all_fan = list(db.fanm.find({},{'_id':False}))
+    all_fan = list(db.fanm.find({}, {'_id':False}))
     return jsonify({'result': all_fan})
-​
+
+
 if __name__ == '__main__':
-   app.run('0.0.0.0', port=5000, debug=True)
+    app.run('0.0.0.0', port=5501, debug=True)
