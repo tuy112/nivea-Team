@@ -1,10 +1,19 @@
-/* header */
 * {
     cursor: default;
 }
+a, button {
+    cursor: pointer;
+    color: #333;
+}
+a.hover {
+    font-weight: 600;
+}
+
+/* header */
 #header {
-    margin-bottom: 90px;
+    margin-bottom: 70px;
     text-align: center;
+    margin-left: 50px;
 }
 #header h1 {}
 #header p {
@@ -33,44 +42,51 @@
     text-align: center;
     line-height: 1.7;
 }
-.main .go  {
-    background: #fff;
-    padding: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 25px;
-    transition: 0.3s;
+.card {
+    box-sizing: border-box;
+    border: 1px solid #111;
+    border-radius: 10px;
+    width: 300px; height: 450px;
 }
-.main .go.hover {
-    background: #333;
-    color: #fff;
-}
-.top { 
+.top {
     display: flex;
-    margin: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 .bottom {
     display: flex;
-    margin: 10px;
+    justify-content: center;
 }
-.topDiv{
-    width: 100%;
-    height: 200px;
-    background: #f0f0f0;
-    border: 1px solid #333;
-    box-sizing: border-box;
+.top .c1 {
+    margin-right: 20px;
 }
-.bottomDiv{
-    width: 100%;
+.top .c1 .card-text {
+    margin-top: -20px;
+}
+.top .c2 {
+    margin-right: 20px;
+}
+.bottom .c4 {
+    margin-right: 20px;
+}
+.top .card .card-img-top {
+    width: 200px;
     height: 200px;
-    background: #e0e0e0;
-    border: 1px solid #333;
-    box-sizing: border-box;
+    margin-top: 15px;
+}
+.bottom .card .card-img-top {
+    width: 200px;
+    height: 200px;
+    margin-top: 15px;
+}
+.top .card .img .card-body {}
+.top .card .card-title {}
+.bottom .card .card-body .card-text {}
+.bottom .card .card-body .btn-primary {
+    color: #333;
 }
 
-.main .feature {}
-.main .goal {}
-.main .promise {}
+
 
 /* footer */
 #footer {
@@ -81,28 +97,49 @@
 #footer p { 
     font-weight: 600;
     text-align: right;
+    font-size: 13px;
 }
 
 
 /* sidebar */
-.btnBox {
+.sideBar {
     position: fixed;
-    right: 0;
+    right: 10px;
+    top: 400px;
 }
-.btnBox .button {}
-
+.sideBar ul {
+    list-style: none;
+}
+.sideBar ul li {
+    border: 1px solid #333;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    padding: 5px;
+}
+.sideBar ul li:last-child {
+    margin-bottom: 0;
+}
+.sideBar ul li a {
+    text-decoration: none;
+    line-height: 1.7;
+    font-weight: 200;
+    transition: 0.5s;
+    font-size: 13px;
+}
+.sideBar ul li:hover a {
+    border-radius: 6px;
+    font-weight: 600;
+    background: #333;
+    color: #fff;
+    padding: 2px;
+}
 
 
 /* =============================================== */
-/* sub page */
-.main .intro {
-    border: 1px solid #333;
-    box-sizing: border-box;
-    width: 500px;
-    margin: 0 auto;
-}
-
-
-@media screen and (max-width: 1024px;)  {
-    
+@media (max-width: 1144px) {
+    .sideBar {
+       display: none;
+    }
 }

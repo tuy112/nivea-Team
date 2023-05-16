@@ -6,73 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Team.Nivea</title>
-    <!-- css 파일 - 배병일 -->
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
+    <!-- 사이드 고정 버튼 -->
+    <div class="sideBar">
+      <ul>
+        <li><a href="#" onclick="">Contact US</a></li>
+        <li><a href="#" onclick="onClickSendEmailBtn();">Send Email</a></li>
+      </ul>
+    </div>
+
+    <!-- header -->
     <header id="header">
       <h1>Team.Nivea</h1>
       <p>포기하지말고.. 대한민국 최고의 개발자가 되자!</p>
       <!-- 날짜 / 날씨 공간 -->
     </header>
+
+    <!-- main -->
     <main id="container" class="main">
+
       <div class="top">
-        <div class="topDiv">
-          <a href="./sub1.html">
-            <img src="" alt="" />
-            <h3>김재혁 - ENFJ (팀장)</h3>
-            <p>"다른 팀들보다 앞서나가되 기본에 충실하자!"</p>
-          </a>
+        <div class="card c1">
+          <img src="https://ca.slack-edge.com/T043597JK8V-U055KTAULS2-604b89ef95eb-512" class="card-img-top" alt="jh">
+          <div class="card-body">
+            <h5 class="card-title">김재혁 / 앞서나가되 기본에 충실하자! </h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">나는 누구일까..??</a>
+          </div>
         </div>
-        <div class="topDiv">
-          <a href="./sub2.html">
-            <img src="" alt="" />
-            <h3>배병일 - INFP</h3>
-            <p>"서로 도와가면서 잘하자!"</p>
-          </a>
+        <div class="card c2">
+          <img src="https://ca.slack-edge.com/T043597JK8V-U056JF99DKJ-676687d724d8-48" class="card-img-top" alt="bi">
+          <div class="card-body">
+            <h5 class="card-title">배병일 / 서로 도와가면서잘하자</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">나는 누구일까..??</a>
+          </div>
         </div>
-        <div class="topDiv">
-          <a href="./sub3.html">
-            <img src="" alt="" />
-            <h3>장두혁 - ENTP</h3>
-            <p>"다 같이 발전하자!"</p>
-          </a>
-        </div>
-      </div>
-      <div class="bottom">
-        <div class="bottomDiv">
-          <a href="./sub4.html">
-            <img src="" alt="" />
-            <h3>오준석 - INFP</h3>
-            <p>"같이 열심히 많이 배우면 좋겠습니다!"</p>
-          </a>
-        </div>
-        <div class="bottomDiv">
-          <a href="./sub5.html">
-            <img src="" alt="" />
-            <h3>조윤주 - INFP</h3>
-            <p>"서로 이끌어가면서 포기하지말자!"</p>
-          </a>
+        <div class="card c3">
+          <img src="https://res.cloudinary.com/dyhnnmhcf/image/upload/v1681745025/profileImage_ny0a9b.jpg" class="card-img-top" alt="dh">
+          <div class="card-body">
+            <h5 class="card-title">장두혁 / 다 같이 발전하자!</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">나는 누구일까..??</a>
+          </div>
         </div>
       </div>
 
-      <!-- 댓글 기능 - 조윤주 -->
+      <div class="bottom">
+        <div class="card c4">
+          <img src="https://ca.slack-edge.com/T043597JK8V-U052RS66N4C-de4e3d968e31-512" class="card-img-top" alt="js">
+          <div class="card-body">
+            <h5 class="card-title">오준석 / 같이 열심히 많이 배우면 좋겠습니다!</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">나는 누구일까..??</a>
+          </div>
+        </div>
+        <div class="card c5">
+          <img src="https://ca.slack-edge.com/T043597JK8V-U054YB2HEPL-ebccd1544fbc-512" class="card-img-top" alt="yj">
+          <div class="card-body">
+            <h5 class="card-title">조윤주 / 서로 이끌면서 포기하지말자!</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">나는 누구일까..??</a>
+          </div>
+        </div>
+      </div>
+
     </main>
+
+    <!-- footer -->
     <footer id="footer">
       <p>design by Team.NIVEA</p>
-
-      <!-- 이메일 공간 - 장두혁 -->
     </footer>
+    
+    
 
-    <!-- 사이드 고정 버튼 -->
-    <div class="btnBox">
-      <button class="github" onclick="">contact us</button><br />
-      <button class="email" onclick="onClickSendEmailBtn()">Send Email</button>
-    </div>
 
     <!-- script part -->
-    <script></script>
     <script src="{{ url_for('static', filename='/js/main.js') }}" defer></script>
   </body>
 </html>
