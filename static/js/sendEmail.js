@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  emailjs.init("FhBDdklrwtHsn51F2");
-
   $("#contact-form").on("submit", function (event) {
     event.preventDefault();
     console.log("a");
@@ -35,3 +33,7 @@ $(document).ready(function () {
       });
   });
 });
+
+const onClickHomeBtn = () => {
+  location.href = "/";
+};

@@ -1,0 +1,3 @@
+const onClickHomeBtn = () => {
+  location.href = "/";
+};

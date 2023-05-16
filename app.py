@@ -39,6 +39,10 @@ def guestbook_get():
     all_fan = list(db.fanm.find({}, {'_id':False}))
     return jsonify({'result': all_fan})
 
+@app.route('/detail')
+def detail():
+    return render_template('detail.html')
+
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5501, debug=True)
