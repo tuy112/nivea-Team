@@ -84,6 +84,14 @@
 }
 
 
+/* sidebar */
+.btnBox {
+    position: fixed;
+    right: 0;
+}
+.btnBox .button {}
+
+
 
 /* =============================================== */
 /* sub page */
@@ -92,4 +100,9 @@
     box-sizing: border-box;
     width: 500px;
     margin: 0 auto;
+}
+
+
+@media screen and (max-width: 1024px;)  {
+    
 }
