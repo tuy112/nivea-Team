@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Team.Nivea</title>
+    <!-- css 파일 - 배병일 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <h1>Team.Nivea</h1>
+      <p>포기하지말고.. 대한민국 최고의 개발자가 되자!</p>
+      <!-- 날짜 / 날씨 공간 -->
+    </header>
+    <main id="container" class="main">
+      <div class="top">
+        <div class="topDiv">
+          <a href="./sub1.html">
+            <img src="" alt="" />
+            <h3>김재혁 - ENFJ (팀장)</h3>
+            <p>"다른 팀들보다 앞서나가되 기본에 충실하자!"</p>
+          </a>
+        </div>
+        <div class="topDiv">
+          <a href="./sub2.html">
+            <img src="" alt="" />
+            <h3>배병일 - INFP</h3>
+            <p>"서로 도와가면서 잘하자!"</p>
+          </a>
+        </div>
+        <div class="topDiv">
+          <a href="./sub3.html">
+            <img src="" alt="" />
+            <h3>장두혁 - ENTP</h3>
+            <p>"다 같이 발전하자!"</p>
+          </a>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="bottomDiv">
+          <a href="./sub4.html">
+            <img src="" alt="" />
+            <h3>오준석 - INFP</h3>
+            <p>"같이 열심히 많이 배우면 좋겠습니다!"</p>
+          </a>
+        </div>
+        <div class="bottomDiv">
+          <a href="./sub5.html">
+            <img src="" alt="" />
+            <h3>조윤주 - INFP</h3>
+            <p>"서로 이끌어가면서 포기하지말자!"</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- 댓글 기능 - 조윤주 -->
+    </main>
+    <footer id="footer">
+      <p>design by Team.NIVEA</p>
+
+      <!-- 이메일 공간 - 장두혁 -->
+    </footer>
+
+    <!-- 사이드 고정 버튼 -->
+    <div class="btnBox">
+      <button class="github" onclick="">contact us</button><br />
+      <button class="email" onclick="onClickSendEmailBtn()">Send Email</button>
+    </div>
+
+    <!-- script part -->
+    <script></script>
+    <script src="{{ url_for('static', filename='/js/main.js') }}" defer></script>
+  </body>
+</html>
