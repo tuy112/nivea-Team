@@ -34,6 +34,18 @@ a.hover {
     text-decoration: underline;
 }
 
+/* mainVisual */
+#mainVisual {}
+#mainVisual .visuBox {
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#mainVisual .visuBox img {}
+#mainVisual .visuBox .visu {}
+#mainVisual .visuBox .visu li {}
+
 /* main */
 #container {
     height: 100%;
