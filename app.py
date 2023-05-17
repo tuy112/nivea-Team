@@ -9,7 +9,8 @@ db = client.dbsparta
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    getInfo = list(db.info.find({}, {'_id':False}))
+    return render_template('index.html', info=getInfo)
 
 @app.route('/sendEmail')
 def contact():
@@ -50,13 +51,9 @@ def guestbook_delete():
 @app.route('/detail')
 def detail():
     query = request.args.get('query')
-    print(query)
+    getInfo = list(db.info.find({'name':query}, {'_id':False}))
 
-    a = list(db.info.find({'name':query}, {'_id':False}))
-
-    print(a)
-
-    return render_template('detail.html', info=a)
+    return render_template('detail.html', info=getInfo)
 
 
 if __name__ == '__main__':
