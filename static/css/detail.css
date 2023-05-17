@@ -1,0 +1,14 @@
+span {
+  font-weight: bold;
+}
+.tagBtn {
+  box-sizing: border-box;
+  padding-left: 30px;
+  cursor: pointer;
+  color: black;
+}
+a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
