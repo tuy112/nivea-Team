@@ -7,6 +7,7 @@
 
     <title>Team.Nivea</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/mainVisual.css') }}" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
@@ -29,30 +30,81 @@
 
     <!-- visual part -->
     <section id="mainVisual">
-      <div class="visuBox">
-        <img src="{{ url_for('static', filename='../static/img/nivea.png')}}" alt="nivea" />
-        <ul class="visu">
+      <div id="slideShow">
+        <ul class="slides">
           <li>
-            <h4>1. Team.NIVEA는..? </h4>
-            <p>
-              - MBTI N이 많은 무한 긍정 팀입니다.
-            </p>
+            <div class="mtxt">
+              <h3>Team.Nivea
+                Be the Learner,Be the Challenger
+                -Team.NIVEA?</h3>
+              <p> 나무보다는 숲을! <br>
+                미래지향적인 사고를 추구하는 iNtution(직관)형 MBTI를 가진저희가 뭉쳤습니다!
+                4조 Nㅣ베아가 궁금하지 않으신가요?👀✨
+              </p>
+            </div>
           </li>
+    
           <li>
-            <h4>2. Team.NIVEA의 약속 : </h4>
-            <p>
-              - 시간 약속 잘 지키고 <br>
-              git hub 커밋칠 때 반드시 날짜와 본인 이니셜 적기
-            </p>
+            <div class="mtxt2">
+              <h3>-우리의 약속:글씨를 쓰는 손:</h3>
+              <p>
+                내 시간이 소중한것처럼 팀원들의 시간도 소중해요 <br>
+                →시간 약속을 반드시 지킵니다.불가피한 상황에선 반드시 연락해서 팀원들에게 미리 알려요!
+                아직은 시작단계! 누가 언제 수정했는지 알면 혼선이 덜 하겠죠? <br>
+                →git commit 시 수정 날짜와 작성자의 이니셜을 적습니다.<br>
+                질문하며 배우고 가르치며 성장합니다 <br>
+                →질문 하는 것에 주저하지 않고, 설명하며 한번 더 배워 같이 성장하는 팀이 됩니다.
+              </p>
+            </div>
           </li>
+    
           <li>
-            <h4>3. Team.NIVEA 목표  : </h4>
-            <p>
-              - 한명도 빠짐없이 무사히 수료하자
-            </p>
+            <div class="mtxt3">
+              <h3>-Team.NIVEA의 목표
+                팀니베아는 포기 하지 않습니다!
+              </h3>
+              <p>
+                서로 서로 이끌어가며 이번 팀 프로젝트를 무사히 마무리하고, <br>
+                4개월 후에는 한층 성장한 모습으로 다시 만나는 것이 저희의 목표입니다. <br>
+              </p>
+            </div>
+          </li>
+    
+          <li>
+            <table class="table" >
+              <th>이름</th>
+              <th>내용</th>
+              <tr>
+                <td class="name">김재혁:</td>
+                <td>탄탄한 기본기를 다져 한발 더 앞서 나가자!</td>
+              </tr>
+              <tr>
+                <td class="name">배병일:</td>
+                <td>낙오되는 사람 없이 서로 도우며 성장하자!</td>
+              </tr>
+              <tr>
+                <td class="name">장두혁:</td>
+                <td>함께 배우면서 목표하는 바로 발전시켜 나가자 !</td>
+              </tr>
+              <tr>
+                <td class="name">오준석:</td>
+                <td>같이 공부하며 끝없이 배워나가자!</td>
+              </tr>
+              <tr>
+                <td>조윤주:</td>
+                <td>서로 이끌고 격려하여 포기말자!</td>
+              </tr>
+            </table>
           </li>
         </ul>
+        <p class="controller">
+    
+          <!-- arrow -->
+          <span class="prev">&lang;</span>
+          <span class="next">&rang;</span>
+        </p>
       </div>
+      
     </section>
     <!-- main -->
     <main id="container" class="main">
@@ -125,5 +177,6 @@
 
     <!-- script part -->
     <script src="{{ url_for('static', filename='/js/main.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='/js/mainVisual.js') }}" defer></script>
   </body>
 </html>

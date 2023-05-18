@@ -50,33 +50,8 @@ a.hover {
 
 
 /* mainVisual */
-#mainVisual {}
-#mainVisual .visuBox {
-    border: 1px solid #222;
-    border-radius: 10px;
-    padding: 5px;
-    box-sizing: border-box;
-    margin-bottom: 50px;
-}
-#mainVisual .visuBox img {
-    margin: 0 auto;
-}
-#mainVisual .visuBox .visu {}
-#mainVisual .visuBox .visu li {
-    list-style: none;
-    text-align: center;
-    line-height: 2.5;
-    
-}
-#mainVisual .visuBox .visu li h4 {
-    font-weight: 600;
-    font-size: 20px;
-}
-#mainVisual .visuBox .visu li p {
-    font-weight: 300;
-    font-size: 14px;
-    margin-top: -20px;
-}
+
+
 
 /* main */
 #container {
