@@ -34,6 +34,21 @@ a.hover {
     text-decoration: underline;
 }
 
+
+
+/* 준석님 css 공간 */
+/* hover 시 반짝반짝 효과 */
+.sideBar {}
+.sideBar ul {}
+.sideBar ul li {}
+.sideBar ul li a {}
+.sideBar ul li a:hover {}
+
+/* 병일님 mainVisul 공간 */
+.mainVisual {}
+
+
+
 /* mainVisual */
 #mainVisual {}
 #mainVisual .visuBox {
