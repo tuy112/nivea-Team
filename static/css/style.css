@@ -1,6 +1,10 @@
 * {
     cursor: default;
 }
+a, button {
+    color: #222;
+    cursor: pointer;
+}
 a.hover {
     font-weight: 600;
 }
@@ -33,35 +37,6 @@ a.hover {
 /* mainVisual */
 #mainVisual {}
 #mainVisual .visuBox {
-<<<<<<< HEAD
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
-}
-#mainVisual .visuBox img {
-    /* margin: 0 auto; */
-}
-#mainVisual .visuBox .visu {
-    display: flex;
-}
-#mainVisual .visuBox .visu li {
-    width: 400px; 
-    height: 200px;
-    list-style: none;
-    text-align: center;
-    line-height: 1.8;
-}
-#mainVisual .visuBox .visu li h4 {
-    font-weight: 600;
-    font-size: 20px;
-}
-#mainVisual .visuBox .visu li p {
-    font-weight: 300;
-    font-size: 14px;
-    margin-top: -22px;
-    margin-bottom: 35px;
-}
-=======
     border: 1px solid #222;
     border-radius: 10px;
     padding: 5px;
@@ -87,7 +62,6 @@ a.hover {
     font-size: 14px;
     margin-top: -20px;
 }
->>>>>>> b289c710e00d9e9d30f57e4d184f23bad67c6f3b
 
 /* main */
 #container {
@@ -102,6 +76,7 @@ a.hover {
     border: 1px solid #111;
     border-radius: 10px;
     width: 300px; height: 450px;
+    cursor: pointer;
 }
 .card a {
     cursor: pointer;
@@ -138,6 +113,7 @@ a.hover {
     width: 200px;
     height: 200px;
     margin-top: 15px;
+    cursor: pointer;
 }
 .top .card .img .card-body {}
 .top .card .card-title {}
