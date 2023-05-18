@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/application.css') }}">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>application for nivea</title>
+  </head>
+  <body>
+    <div class="container">
+      <input id="check-btn" type="checkbox" />
+      <label for="check-btn">Team.Nivea에 합류하고 싶다면?<a href="/templates/application.html">🙆‍♂️</a></label>
+      <p>▲ Click Here ▲</p>
+      <ul class="menubars">
+        <form id="login-form">
+          이름:
+          <input id="name" type="text" placeholder="이름을 입력하세요" />
+
+          메일:<input
+            id="email"
+            type="email"
+            placeholder=" Email을 입력하세요"
+          />
+          깃허브:<input
+            id="github"
+            type="url"
+            placeholder="깃허브 주소를 입력하세요"
+          />
+          장점:<input
+            id="str"
+            type="text"
+            placeholder="나의 장점을 간단히 작성해주세요"
+          />
+          <input
+            id="submit"
+            type="submit"
+            class="w-btn w-btn-indigo"
+            value="제출하기"
+          />
+        </form>
+      </ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='/js/application.js') }}" defer></script>
+
+  </body>
+</html>

@@ -1,55 +1,69 @@
-* 초기화 */
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 li{
   list-style-type: none;
+  background-color: beige;
 }
 
-/* 보여줄 구간의 높이와 넓이 설정 */
-#slideShow{
-  width: 500px;
+
+.slideShow{
+  width: 420px;
   height: 300px;
   position: relative;
-  margin: 50px auto;
+  margin-left: auto;
+  margin-right: auto;
+  
   overflow: hidden;
-   
-  /*리스트 형식으로 이미지를 일렬로 
-  정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은
-  hidden으로 숨겨줘야됨*/
+}
+#slideShow{
+  transition: left 0.5s ease-out; 
+  width: 700px;
+  height: 500px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 120px;
 }
 
 
 .slides{
   position: absolute;
-  left: 0;
+  left: 0px;
   top: 0;
-  width: 3000px;
-  transition: left 0.5s ease-out; 
+  width: 3500px;
+  transition: left 0.5s ease-out;
+
 }
 
 .slides li:nth-child(1) {
   background: url();
   height: 300px;
   width: 300px;
+  padding-top: 80px;
 }
 .slides li:nth-child(2) {
   background: url();
   height: 300px;
   width: 300px;
+  
 }
 .slides li:nth-child(3) {
   background: url();
   width: 300px;
   height: 300px;
+  padding-top: 80px;
+  
 }
 .slides li:nth-child(4) {
   background: url();
   width: 300px;
   height: 300px;
+  padding-top: 20px;
+  
 }
 .table {
   border: 2px solid #111;
@@ -68,7 +82,8 @@ li{
 
 
 .slides li:first-child{
-  margin-left: 69px;
+  margin-left: 50px;
+  margin-right: 135px;
 }
 
 /* 슬라이드들 옆으로 정렬 */
@@ -76,10 +91,15 @@ li{
   float: left;
   margin-right: 100px;
 }
+.slides li:last-child{
+  float: left;
+  margin-left: 10px;
+}
 
 .slides li{
   float: left;
 }
+
 
 .controller span{
   position:absolute;
@@ -89,7 +109,8 @@ li{
   border-radius: 50%;
   padding: 10px 20px;
   top: 50%;
-  font-size: 1.3em;
+  font-size: 2.3em;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -99,7 +120,7 @@ li{
 }
 
 .prev{
-  left: 10px;
+  left: -50px;
 }
 
 /* 이전 화살표에 마우스 커서가 올라가 있을때 
@@ -109,7 +130,7 @@ li{
 }
 
 .next{
-  right: 10px;
+  right: -30px;
 }
 
 /* 다음 화살표에 마우스 커서가 올라가 있을때 
@@ -120,6 +141,8 @@ li{
 
 .mtxt{
   margin: 0 auto;
+  
+  width: 350px;
 }
 
 .mtxt > h3{
@@ -131,6 +154,8 @@ li{
   text-align: center;
   line-height: 1.5;;
 }
+
+.mtxt2{margin-top: -5px;}
 
 .mtxt2 > h3{
   text-align: center;

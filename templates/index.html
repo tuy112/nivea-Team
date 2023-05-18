@@ -6,39 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Team.Nivea</title>
+    <!-- css part -->
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/mainVisual.css') }}" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
-    <!-- 사이드 고정 버튼 -->
-    <div class="sideBar">
-      <ul>
-        <li><a href="https://github.com/tuy112/nivea-Team" onclick="">Contact Us</a></li>
-        <li><a href="../comment">Cheer UP</a></li>
-        <li><a href="../contact">Send Email</a></li>
-      </ul>
-    </div>
+    
+  <!-- header -->
+  <header id="header">
 
-    <!-- header -->
-    <header id="header">
-      <h1>Team.Nivea</h1>
-      <p>포기하지말고.. 대한민국 최고의 개발자가 되자!</p>
-      <!-- 날짜 / 날씨 공간 -->
+  <!-- sideNav start -->
+  <div class="l-navbar" id="navbar">
+    <nav class="nav">
+      <div>
+        <div class="nav__brand">
+            <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+            <a href="#" class="nav__logo">Team.Nivea</a>
+        </div>
+        <div class="nav__list">
+          <a href="#" class="nav__link active">
+            <ion-icon name="home-outline"></ion-icon>
+            <span class="nav_name">&nbsp;Home</span>
+          </a>
+          <a href="https://github.com/tuy112/nivea-Team" class="nav__link githublink">
+              <ion-icon name="logo-instagram"></ion-icon>
+              <span class="nav_name">&nbsp;Contact Us</span>
+          </a>
+          <a href="../comment" class="nav__link">
+              <ion-icon name="logo-octocat"></ion-icon>
+              <span class="nav_name">&nbsp;Cheer UP</span>
+          </a>
 
-    </header>
+          <a href="../contact" class="nav__link">
+              <ion-icon name="airplane-sharp"></ion-icon>
+              <span class="nav_name">&nbsp;Send Email</span>
+          </a>
 
-    <!-- visual part -->
-    <section id="mainVisual">
-      <div id="slideShow">
+          <a href="../application" class="nav__link">
+              <ion-icon name="heart-outline"></ion-icon>
+              <span class="nav_name">&nbsp;Nivea에 합류하기</span>
+          </a>
+      </div>
+    </nav>
+  </div>
+
+</header>
+
+  
+
+  <!-- visual part -->
+  <h1>Team.Nivea</h1>
+  <p>    
+
+  </p>
+  <section id="mainVisual">
+
+    <div id="slideShow">
+      <div class="slideShow">
         <ul class="slides">
-          <li>
+          <li  style="margin-right: 130px;">
             <div class="mtxt">
-              <h3>Team.Nivea
-                Be the Learner,Be the Challenger
-                -Team.NIVEA?</h3>
-              <p> 나무보다는 숲을! <br>
-                미래지향적인 사고를 추구하는 iNtution(직관)형 MBTI를 가진저희가 뭉쳤습니다!
+              <h3 class="slogan">
+                🔥Be the Learner,Be the Challenger🔥
+                </h3>
+              <p class="forest"> 나무보다는 숲을! <br>
+                미래지향적인 사고를 추구하는 iNtution(직관)형 MBTI를 가진 저희가 뭉쳤습니다!<br>
                 4조 Nㅣ베아가 궁금하지 않으신가요?👀✨
               </p>
             </div>
@@ -46,14 +78,14 @@
     
           <li>
             <div class="mtxt2">
-              <h3>-우리의 약속:글씨를 쓰는 손:</h3>
+              <h3>우리의 약속✍</h3>
               <p>
-                내 시간이 소중한것처럼 팀원들의 시간도 소중해요 <br>
-                →시간 약속을 반드시 지킵니다.불가피한 상황에선 반드시 연락해서 팀원들에게 미리 알려요!
-                아직은 시작단계! 누가 언제 수정했는지 알면 혼선이 덜 하겠죠? <br>
-                →git commit 시 수정 날짜와 작성자의 이니셜을 적습니다.<br>
-                질문하며 배우고 가르치며 성장합니다 <br>
-                →질문 하는 것에 주저하지 않고, 설명하며 한번 더 배워 같이 성장하는 팀이 됩니다.
+                <div class="rule">✅시간은 금이다! 팀원들의 시간은 소중해요</div>
+                <p class="sub_rule">➡시간 약속을 반드시 지킵니다.불가피한 상황에선 반드시 연락해서 팀원들에게 미리 알려요!</p>
+                <div class="rule2">✅아직은 시작단계! 누가 언제 수정했는지 알면 혼선이 덜 하겠죠?</div>
+                ➡git commit 시 수정 날짜와 작성자의 이니셜을 적습니다.<br>
+                ✅질문하며 배우고 가르치며 성장합니다. <br>
+                ➡질문 하는 것에 주저하지 않고, 설명하며 한번 더 배워 같이 성장하는 팀이 됩니다.
               </p>
             </div>
           </li>
@@ -97,86 +129,86 @@
             </table>
           </li>
         </ul>
-        <p class="controller">
-    
-          <!-- arrow -->
-          <span class="prev">&lang;</span>
-          <span class="next">&rang;</span>
-        </p>
       </div>
-      
-    </section>
-    <!-- main -->
-    <main id="container" class="main">
-
-      <div class="top">
-        <div class="card c1">
-          <a href="../detail?query={{info[0].name}}" class="btn btn-primary">
-            <img src="https://ca.slack-edge.com/T043597JK8V-U055KTAULS2-604b89ef95eb-512" class="card-img-top" alt="jh">
-            <div class="card-body">
-              <h5 class="card-title">김재혁 / 앞서나가되 기본에 충실하자! </h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">나는 누구일까..??</a>
-            </div>
-          </a>
-        </div>
-        <div class="card c2">
-          <a href="../detail?query={{info[0].name}}" class="btn btn-primary">
-            <img src="https://ca.slack-edge.com/T043597JK8V-U056JF99DKJ-676687d724d8-48" class="card-img-top" alt="bi">
-            <div class="card-body">
-              <h5 class="card-title">배병일 / 서로 도와가면서잘하자</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">나는 누구일까..??</a>
-            </div>
-          </a>
-        </div>
-        <div class="card c3">
-          <a href="../detail?query={{info[0].name}}" class="btn btn-primary">
-            <img src="https://res.cloudinary.com/dyhnnmhcf/image/upload/v1681745025/profileImage_ny0a9b.jpg" class="card-img-top" alt="dh">
-            <div class="card-body">
-              <h5 class="card-title">장두혁 / 다 같이 발전하자!</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">나는 누구일까..??</a>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="bottom">
-        <div class="card c4">
-          <a href="../detail?query={{info[0].name}}" class="btn btn-primary">
-            <img src="https://ca.slack-edge.com/T043597JK8V-U052RS66N4C-de4e3d968e31-512" class="card-img-top" alt="js">
-            <div class="card-body">
-              <h5 class="card-title">오준석 / 같이 열심히 많이 배우면 좋겠습니다!</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">나는 누구일까..??</a>
-            </div>
-          </a>
-        </div>
-        <div class="card c5">
-          <a href="../detail?query={{info[0].name}}" class="btn btn-primary">
-            <img src="https://ca.slack-edge.com/T043597JK8V-U054YB2HEPL-ebccd1544fbc-512" class="card-img-top" alt="yj">
-            <div class="card-body">
-              <h5 class="card-title">조윤주 / 서로 이끌면서 포기하지말자!</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">나는 누구일까..??</a>
-            </div>
-          </a>
-        </div>
-      </div>
-
-    </main>
-
-    <!-- footer -->
-    <footer id="footer">
-      <p>design by Team.NIVEA</p>
-    </footer>
+      <p class="controller">
+        
+        <!-- arrow -->
+        <span class="prev">&lang;</span>
+        <span class="next">&rang;</span>
+      </p>
+    </div>
     
-    
+  </section>
+  <!-- main -->
+  <main id="container" class="main">
+
+    <div class="top">
+      <div class="card c1">
+        <a href="../detail?query={{info[0].name}}" class="btn btn-primary">
+          <img src="https://ca.slack-edge.com/T043597JK8V-U055KTAULS2-604b89ef95eb-512" class="card-img-top" alt="jh">
+          <div class="card-body">
+            <h5 class="card-title">김재혁 <br> 앞서나가되 기본에 충실하자! </h5>
+            <p class="card-text">click This Card 🙌</p>
+          </div>
+        </a>
+      </div>
+      <div class="card c2">
+        <a href="../detail?query={{info[1].name}}" class="btn btn-primary">
+          <img src="https://ca.slack-edge.com/T043597JK8V-U056JF99DKJ-676687d724d8-48" class="card-img-top" alt="bi">
+          <div class="card-body">
+            <h5 class="card-title">배병일 <br> 서로 도와가면서잘하자</h5>
+            <p class="card-text">click This Card 🙌</p>
+          </div>
+        </a>
+      </div>
+      <div class="card c3">
+        <a href="../detail?query={{info[2].name}}" class="btn btn-primary">
+          <img src="https://res.cloudinary.com/dyhnnmhcf/image/upload/v1681745025/profileImage_ny0a9b.jpg" class="card-img-top" alt="dh">
+          <div class="card-body">
+            <h5 class="card-title">장두혁 <br> 다 같이 발전하자!</h5>
+            <p class="card-text">click This Card 🙌</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="card c4">
+        <a href="../detail?query={{info[3].name}}" class="btn btn-primary">
+          <img src="https://ca.slack-edge.com/T043597JK8V-U052RS66N4C-de4e3d968e31-512" class="card-img-top" alt="js">
+          <div class="card-body">
+            <h5 class="card-title">오준석 <br> 같이 열심히 많이 배우면 좋겠습니다!</h5>
+            <p class="card-text">click This Card 🙌</p>
+          </div>
+        </a>
+      </div>
+      <div class="card c5">
+        <a href="../detail?query={{info[4].name}}" class="btn btn-primary">
+          <img src="https://ca.slack-edge.com/T043597JK8V-U054YB2HEPL-ebccd1544fbc-512" class="card-img-top" alt="yj">
+          <div class="card-body">
+            <h5 class="card-title">조윤주 <br> 서로 이끌면서 포기하지말자!</h5>
+            <p class="card-text">click This Card 🙌</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- footer -->
+  <footer id="footer">
+    <p>design by Team.NIVEA</p>
+
+  </footer>
+  
+  
 
 
-    <!-- script part -->
-    <script src="{{ url_for('static', filename='/js/main.js') }}" defer></script>
-    <script src="{{ url_for('static', filename='/js/mainVisual.js') }}" defer></script>
+  <!-- script part -->
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='/js/main.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='/js/mainVisual.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='/js/navBar.js') }}" defer></script>
   </body>
 </html>

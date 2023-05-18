@@ -3,7 +3,10 @@ app = Flask(__name__)
 
 from pymongo import MongoClient
 
-client = MongoClient('mongodb+srv://sparta:test@sparta.mw5zmbb.mongodb.net/?retryWrites=true&w=majority')
+import certifi
+ca = certifi.where()
+
+client = MongoClient('mongodb+srv://sparta:test@sparta.mw5zmbb.mongodb.net/?retryWrites=true&w=majority', tlsCAFile=ca)
 
 db = client.dbsparta
 
@@ -19,6 +22,10 @@ def contact():
 @app.route('/comment')
 def comment():
     return render_template('comment.html')
+
+@app.route('/application')
+def application():
+    return render_template('application.html')
 
 # comment
 @app.route("/guestbook", methods=["POST"])
