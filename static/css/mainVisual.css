@@ -1,26 +1,24 @@
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-li{
+li {
   list-style-type: none;
   background-color: beige;
 }
 
-
-.slideShow{
+.slideShow {
   width: 420px;
-  height: 300px;
+  height: 470px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  
+
   overflow: hidden;
 }
-#slideShow{
-  transition: left 0.5s ease-out; 
+#slideShow {
+  transition: left 0.5s ease-out;
   width: 700px;
   height: 500px;
   position: relative;
@@ -29,14 +27,16 @@ li{
   padding-top: 120px;
 }
 
-
-.slides{
+.slides {
   position: absolute;
   left: 0px;
   top: 0;
   width: 3500px;
   transition: left 0.5s ease-out;
+}
 
+.slides li {
+  line-height: 1.6;
 }
 
 .slides li:nth-child(1) {
@@ -49,60 +49,60 @@ li{
   background: url();
   height: 300px;
   width: 300px;
-  
+  margin-bottom: 50px;
 }
 .slides li:nth-child(3) {
   background: url();
   width: 300px;
   height: 300px;
   padding-top: 80px;
-  
 }
 .slides li:nth-child(4) {
   background: url();
   width: 300px;
   height: 300px;
   padding-top: 20px;
-  
 }
 .table {
   border: 2px solid #111;
   border-radius: 10px;
   margin-left: 13px;
+  padding: 5px;
+  margin-top: 16px;
+  margin-left: -50px;
+  width: 400px;
+}
+.table th {
   padding: 3px;
 }
-.table th + td {
-  border: 1px solid #111;
+.table td {
+  padding: 3px;
 }
 
-.name{
+.name {
   width: 70px;
 }
 
-
-
-.slides li:first-child{
+.slides li:first-child {
   margin-left: 50px;
   margin-right: 135px;
 }
 
-/* 슬라이드들 옆으로 정렬 */
-.slides li:not(:last-child){
+.slides li:not(:last-child) {
   float: left;
   margin-right: 100px;
 }
-.slides li:last-child{
+.slides li:last-child {
   float: left;
   margin-left: 10px;
 }
 
-.slides li{
+.slides li {
   float: left;
 }
 
-
-.controller span{
-  position:absolute;
+.controller span {
+  position: absolute;
   background-color: transparent;
   color: black;
   text-align: center;
@@ -114,77 +114,74 @@ li{
   cursor: pointer;
 }
 
-/* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 */
-.controller span:hover{
+.controller span:hover {
   background-color: rgba(128, 128, 128, 0.11);
 }
 
-.prev{
+.prev {
   left: -50px;
 }
 
-/* 이전 화살표에 마우스 커서가 올라가 있을때 
-이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
-.prev:hover{
+.prev:hover {
   transform: translateX(-10px);
 }
 
-.next{
+.next {
   right: -30px;
 }
 
-/* 다음 화살표에 마우스 커서가 올라가 있을때 
-이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
-.next:hover{
+.next:hover {
   transform: translateX(10px);
 }
 
-.mtxt{
+.mtxt {
   margin: 0 auto;
-  
+
   width: 350px;
 }
 
-.mtxt > h3{
+.mtxt > h3 {
   text-align: center;
   line-height: 1.7;
 }
 
-.mtxt > p{
+.mtxt > p {
   text-align: center;
-  line-height: 1.5;;
+  line-height: 1.5;
 }
 
-.mtxt2{margin-top: -5px;}
-
-.mtxt2 > h3{
-  text-align: center;
-  line-height: 1.7;
+.mtxt2 {
+  margin-left: -60px;
+  margin-top: -5px;
+  width: 355px;
 }
 
-.mtxt2 > p{
-  text-align: center;
-  line-height: 1.5;;
-}
-
-.mtxt3 > h3{
+.mtxt2 > h3 {
   text-align: center;
   line-height: 1.7;
 }
 
-.mtxt3 > p{
+.mtxt2 > p {
   text-align: center;
-  line-height: 1.5;;
+  line-height: 1.5;
 }
 
-.mtxt4 > h3{
+.mtxt3 > h3 {
   text-align: center;
   line-height: 1.7;
 }
 
-.mtxt4 > p{
+.mtxt3 > p {
   text-align: center;
-  line-height: 1.5;;
+  line-height: 1.5;
 }
 
+.mtxt4 > h3 {
+  text-align: center;
+  line-height: 1.7;
+}
 
+.mtxt4 > p {
+  text-align: center;
+  line-height: 1.5;
+}
