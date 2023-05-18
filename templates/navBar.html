@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Team.Nivea</title>
+    <!-- 아래 추가 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" />
+    
+    <style>
+    /* navBar.css 여기서 시작 */
+        /* GOOGLE FONTS */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+        /* VARIABLES CSS */
+        :root {
+            --nav--width: 92px;
+
+            /* Colores */
+            --first-color: #0c5df4;
+            --bg-color: #12192c;
+            --sub-color: #b6cefc;
+            --white-color: #fff;
+
+            /* Fuente y tipografia */
+            --body-font: 'Poppins', sans-serif;
+            --normal-font-size: 1rem;
+            --small-font-size: .875rem;
+
+            /* z index */
+            --z-fixed: 100;
+        }
+
+        /* BASE */
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+            margin: 0;
+            padding: 2rem 0 0 6.75rem;
+            font-family: var(--body-font);
+            font-size: var(--normal-font-size);
+            transition: .5s;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* l NAV */
+        .l-navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: var(--nav--width);
+            height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--white-color);
+            padding: 1.5rem 1.5rem 2rem;
+            transition: .5s;
+            z-index: var(--z-fixed);
+        }
+
+        /* NAV */
+        .nav {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .nav__brand {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .nav__toggle {
+            font-size: 1.25rem;
+            padding: .75rem;
+            cursor: pointer;
+        }
+
+        .nav__logo {
+            color: var(--white-color);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .nav__link {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            align-items: center;
+            column-gap: .75rem;
+            padding: .75rem;
+            color: var(--white-color);
+            border-radius: .5rem;
+            margin-bottom: 1rem;
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        .nav__link:hover {
+            background-color: var(--first-color);
+        }
+
+        .nav__icon {
+            font-size: 1.25rem;
+        }
+
+        .nav_name {
+            font-size: var(--small-font-size);
+            cursor: pointer;
+        }
+
+        /* Expander menu */
+        .expander {
+            width: calc(var(--nav--width) + 9.25rem);
+            
+        }
+
+        /* Add padding body*/
+        .body-pd {
+            padding: 2rem 0 0 16rem;
+            
+        }
+
+        /* Active links menu */
+        .active {
+            background-color: var(--first-color);
+        }
+
+        /* COLLAPSE */
+        .collapse {
+            grid-template-columns: 20px max-content 1fr;
+        }
+
+        .collapse__link {
+            justify-self: flex-end;
+            transition: .5;
+        }
+
+        .collapse__menu {
+            display: none;
+            padding: .75rem 2.25rem;
+        }
+
+        .collapse__sublink {
+            color: var(--sub-color);
+            font-size: var(--small-font-size);
+        }
+
+        .collapse__sublink:hover {
+            color: var(--white-color);
+        }
+
+        /* Show collapse */
+        .showCollapse {
+            display: block;
+        }
+
+        /* Rotate icon */
+        .rotate {
+            transform: rotate(180deg);
+            transition: .5s;
+        }
+        
+    </style>
+   
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <!-- IONICONS -->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+</head>
+
+<body>
+    <!-- 여기서 navBar.html시작 -->
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <div class="nav__brand">
+                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                    <a href="#" class="nav__logo">Team.Nivea</a>
+                </div>
+                <div class="nav__list">
+                    <a href="https://github.com/tuy112/nivea-Team" class="nav__link active">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                        <span class="nav_name">&nbsp;Contact Us</span>
+                    </a>
+                    <!-- <a href="#" class="nav__link active">
+                        <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">Contact Us</span>
+                    </a> -->
+                    <a href="../comment" class="nav__link">
+                        <ion-icon name="logo-octocat"></ion-icon>
+                        <span class="nav_name">&nbsp;Cheer UP</span>
+                    </a>
+                    
+                    <!-- <a href="#" class="nav__link">
+                        <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">Cheer UP</span>
+                    </a> -->
+
+                    <a href="../contact" class="nav__link">
+                        <ion-icon name="airplane-sharp"></ion-icon>
+                        <span class="nav_name">&nbsp;Send Email</span>
+                    </a>
+
+                    <a href="신청하기URL" class="nav__link">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <span class="nav_name">&nbsp;Nivea에 합류하기</span>
+                    </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- 여기서 navBar.html 끝 -->
+    
+    <div class="sideBar">
+        <ul>
+            <li><a href="https://github.com/tuy112/nivea-Team" Onclick class="githublink">Contact Us</a></li>
+            <li><a href="../comment">Cheer UP</a></li>
+            <li><a href="../contact">Send Email</a></li>
+        </ul>
+    </div>
+    
+    <!-- header -->
+    <header id="header">
+        <h1>Team.Nivea</h1>
+        <p>포기하지말고.. 대한민국 최고의 개발자가 되자!</p>
+        <!-- 날짜 / 날씨 공간 -->
+    
+    </header>
+    
+    <!-- visual part -->
+    <section id="mainVisual">
+        <div class="visuBox">
+            <img src="{{ url_for('static', filename='../static/img/nivea.png')}}" alt="nivea" />
+            <ul class="visu">
+                <li>
+                    <h4>1. Team.NIVEA는..? </h4>
+                    <p>
+                        - MBTI N이 많은 무한 긍정 팀입니다.
+                    </p>
+                </li>
+                <li>
+                    <h4>2. Team.NIVEA의 약속 : </h4>
+                    <p>
+                        - 시간 약속 잘 지키고 <br>
+                        git hub 커밋칠 때 반드시 날짜와 본인 이니셜 적기
+                    </p>
+                </li>
+                <li>
+                    <h4>3. Team.NIVEA 목표 : </h4>
+                    <p>
+                        - 한명도 빠짐없이 무사히 수료하자
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- main -->
+    <main id="container" class="main">
+    
+        <div class="top">
+            <div class="card c1">
+                <a href="../detail?query={{info[0].name}}" class="btn btn-primary">
+                    <img src="https://ca.slack-edge.com/T043597JK8V-U055KTAULS2-604b89ef95eb-512" class="card-img-top"
+                        alt="jh">
+                    <div class="card-body">
+                        <h5 class="card-title">김재혁 / 앞서나가되 기본에 충실하자! </h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">나는 누구일까..??</a>
+                    </div>
+                </a>
+            </div>
+            <div class="card c2">
+                <a href="../detail?query={{info[0].name}}" class="btn btn-primary">
+                    <img src="https://ca.slack-edge.com/T043597JK8V-U056JF99DKJ-676687d724d8-48" class="card-img-top"
+                        alt="bi">
+                    <div class="card-body">
+                        <h5 class="card-title">배병일 / 서로 도와가면서잘하자</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">나는 누구일까..??</a>
+                    </div>
+                </a>
+            </div>
+            <div class="card c3">
+                <a href="../detail?query={{info[0].name}}" class="btn btn-primary">
+                    <img src="https://res.cloudinary.com/dyhnnmhcf/image/upload/v1681745025/profileImage_ny0a9b.jpg"
+                        class="card-img-top" alt="dh">
+                    <div class="card-body">
+                        <h5 class="card-title">장두혁 / 다 같이 발전하자!</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">나는 누구일까..??</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+    
+        <div class="bottom">
+            <div class="card c4">
+                <a href="../detail?query={{info[0].name}}" class="btn btn-primary">
+                    <img src="https://ca.slack-edge.com/T043597JK8V-U052RS66N4C-de4e3d968e31-512" class="card-img-top"
+                        alt="js">
+                    <div class="card-body">
+                        <h5 class="card-title">오준석 / 같이 열심히 많이 배우면 좋겠습니다!</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">나는 누구일까..??</a>
+                    </div>
+                </a>
+            </div>
+            <div class="card c5">
+                <a href="../detail?query={{info[0].name}}" class="btn btn-primary">
+                    <img src="https://ca.slack-edge.com/T043597JK8V-U054YB2HEPL-ebccd1544fbc-512" class="card-img-top"
+                        alt="yj">
+                    <div class="card-body">
+                        <h5 class="card-title">조윤주 / 서로 이끌면서 포기하지말자!</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">나는 누구일까..??</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+    
+    </main>
+    
+    <!-- footer -->
+    <footer id="footer">
+        <p>design by Team.NIVEA</p>
+    </footer>
+    
+    
+    
+    
+    <!-- script part -->
+    <script src="{{ url_for('static', filename='/js/main.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='/js/navBar.js') }}" defer></script>
+    
+</body>
+
+</html>
