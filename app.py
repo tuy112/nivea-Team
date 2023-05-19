@@ -39,18 +39,21 @@ def guestbook_post():
     num = ""
     for i in range(length) :
         num += random.choice(string_pool)
+    # { name: ~!!!}, {}, {}, {}, {}, {}
     doc={
         'name':name_receive,
         'comment':comment_receive,
         'group':group_receive,
         '_id':num
     }
+    # {name : '두혁', comma~~~~}
     db.fanm.insert_one(doc)
 
     return jsonify({'msg': '응원 저장 완료'})
 
 @app.route('/guestbook', methods=['GET'])
 def guestbook_get():
+    # [{0} {1} {2} {3}]
     all_fan =list(db.fanm.find({}))
     return jsonify({'result': all_fan})
 
@@ -60,6 +63,23 @@ def guestbook_delete():
     num_receive = request.form['num_give']
     db.fanm.delete_one({'_id': num_receive})
     return jsonify({'msg': '삭제 완료!'})
+
+# 수정
+@app.route("/guestbook/update", methods=["UPDATE"])
+def guestbook_update():
+    num_receive = request.form['num_give']
+    comment_receive = request.form['comment_give']
+
+    # db.Collection.update({ matchQuery }, { updateQuery }, { optionQuery }) - updateMany
+
+    currentId = {'_id' : num_receive}
+    newValues = {'$set': {'comment': comment_receive}}
+    db.fanm.update_one(currentId , newValues )
+    # update_one    updateOne
+
+    print(type(num_receive), comment_receive)
+
+    return jsonify({'msg': '수정 완료!'})
 
 
 
