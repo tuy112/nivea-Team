@@ -14,7 +14,9 @@
   font-size: 11pt;
   margin-top: -140px;
 }
-.temp_min,
+.temp_min {
+  float: right;
+}
 .temp_max {
   float: right;
 }
