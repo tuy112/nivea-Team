@@ -29,7 +29,7 @@ $.ajax({
     var $temp_min = "최저 온도&nbsp;&nbsp;&nbsp;&nbsp;" + Math.floor(resp.main.temp_min - 273.15) + "º";
     var $temp_max = "최고 온도&nbsp;&nbsp;&nbsp;&nbsp;" + Math.floor(resp.main.temp_max - 273.15) + "º";
 
-    $(".weather_icon").append('<i class="' + weatherIcon[$Icon] + ' fa-5x" style="height : 80px; width : 80px; margin-right : 100px; margin-top: -100px"></i>');
+    $(".weather_icon").append('<i class="' + weatherIcon[$Icon] + ' fa-5x" style="height : 100px; width : 100px;></i>');
     $(".weather_description").prepend($weather_description);
     $(".current_temp").prepend($Temp);
     $(".humidity").prepend($humidity);
