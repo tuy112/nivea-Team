@@ -4,236 +4,240 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
-        integrity="sha384-vuFJ2JiSdUpXLKGK+tDteQZBqNlMwAjhZ3TvPaDfN9QmbPb7Q8qUpbSNapQev3YF"
-        crossorigin="c010956eae"></script>
-
-    <title>Team.Nivea</title>
-    <!-- css part -->
-    <link rel="stylesheet" href="{{ url_for('static', ='/css/style.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', ='/css/mainVisual.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', ='/css/nav.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', ='/css/weather.css') }}" />
-
+    <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" integrity="sha384-vuFJ2JiSdUpXLKGK+tDteQZBqNlMwAjhZ3TvPaDfN9QmbPb7Q8qUpbSNapQev3YF" crossorigin="c010956eae"></script>
   </head>
+  <title>Team.Nivea</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/nav.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/mainVisual.css')}}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/weather.css')}}" />
+
   <body>
-    
-  <!-- header -->
-  <header id="header">
+    <!-- header -->
+    <header id="header">
+      <!-- sideNav start -->
+      <div class="l-navbar" id="navbar">
+        <nav class="nav">
+          <div>
+            <div class="nav__brand">
+              <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+              <a href="/" class="nav__logo">Team.Nivea</a>
+            </div>
+            <div class="nav__list">
+              <a href="/" class="nav__link active">
+                <ion-icon name="home-outline"></ion-icon>
+                <span class="nav_name">&nbsp;Home</span>
+              </a>
+              <a href="https://github.com/tuy112/nivea-Team" class="nav__link githublink">
+                <ion-icon name="logo-instagram"></ion-icon>
+                <span class="nav_name">&nbsp;Contact Us</span>
+              </a>
+              <a href="../comment" class="nav__link">
+                <ion-icon name="logo-octocat"></ion-icon>
+                <span class="nav_name">&nbsp;Cheer UP</span>
+              </a>
 
-  <!-- sideNav start -->
-  <div class="l-navbar" id="navbar">
-    <nav class="nav">
-      <div>
-        <div class="nav__brand">
-            <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-            <a href="/" class="nav__logo">Team.Nivea</a>
-        </div>
-        <div class="nav__list">
-          <a href="/" class="nav__link active">
-            <ion-icon name="home-outline"></ion-icon>
-            <span class="nav_name">&nbsp;Home</span>
-          </a>
-          <a href="https://github.com/tuy112/nivea-Team" class="nav__link githublink">
-              <ion-icon name="logo-instagram"></ion-icon>
-              <span class="nav_name">&nbsp;Contact Us</span>
-          </a>
-          <a href="../comment" class="nav__link">
-              <ion-icon name="logo-octocat"></ion-icon>
-              <span class="nav_name">&nbsp;Cheer UP</span>
-          </a>
+              <a href="../sendEmail" class="nav__link">
+                <ion-icon name="airplane-sharp"></ion-icon>
+                <span class="nav_name">&nbsp;Send Email</span>
+              </a>
 
-          <a href="../sendEmail" class="nav__link">
-              <ion-icon name="airplane-sharp"></ion-icon>
-              <span class="nav_name">&nbsp;Send Email</span>
-          </a>
-
-          <a href="../application" class="nav__link">
-              <ion-icon name="heart-outline"></ion-icon>
-              <span class="nav_name">&nbsp;Nivea에 합류하기</span>
-          </a>
+              <a href="../application" class="nav__link">
+                <ion-icon name="heart-outline"></ion-icon>
+                <span class="nav_name">&nbsp;Nivea에 합류하기</span>
+              </a>
+            </div>
+          </div>
+        </nav>
       </div>
-    </nav>
-  </div>
+    </header>
 
-</header>
-
-  <!-- weather -->
-  
-  <h1>Team.Nivea</h1>
-  <!-- visual part -->
+    <!-- weather -->
+    <h1>Team.Nivea</h1>
     <div class="mainweather" id="mainweather">
       <div class="maintxt">
-            <div class="weather_icon"></div><br/>
-          <div class="detail_inf">
-            <div class="temp_min"></div>
-            <div class="temp_max"></div>
-            <div class="humidity"></div>
-            <div class="wind"></div>
-            <div class="cloud"></div>
-          </div>
-          <div class="middle_inf">
-            <div class="current_temp"></div>
-            <div class="weather_description"></div>
-            <div class="city"></div>
-          </div>
+        <div class="weather_icon"></div>
+        <br />
+        <div class="detail_inf">
+          <div class="temp_min"></div>
+          <div class="temp_max"></div>
+          <div class="humidity"></div>
+          <div class="wind"></div>
+          <div class="cloud"></div>
+        </div>
+        <div class="middle_inf">
+          <div class="current_temp"></div>
+          <div class="weather_description"></div>
+          <div class="city"></div>
+        </div>
       </div>
     </div>
-  <p>    
 
-  </p>
-  <section id="mainVisual">
-    <!-- mainvisual -->
-    <div id="slideShow">
-      <div class="slideShow">
-        <ul class="slides">
-          <li  style="margin-right: 130px;">
-            <div class="mtxt">
-              <h3 class="slogan">
-                🔥Be the Learner, Be the Challenger🔥
-                </h3>
-              <p class="forest"> 나무보다는 숲을! <br>
-                미래지향적인 사고를 추구하는 iNtution(직관)형 MBTI를 가진 저희가 뭉쳤습니다!<br>
-                4조 Nㅣ베아가 궁금하지 않으신가요?👀✨
-              </p>
-            </div>
-          </li>
-    
-          <li>
-            <div class="mtxt2">
-              <h3>우리의 약속✍</h3>
-              <p>
-                <div class="rule">✅시간은 금이다! 팀원들의 시간은 소중해요.</div>
-                <p class="sub_rule">➡시간 약속을 반드시 지킵니다.불가피한 상황엔 반드시 연락해서 <br> 팀원들에게 미리 알려요!</p>
-                <div class="rule2">✅아직은 시작단계!누가 언제 수정했는지 알면 혼선이 &nbsp;&nbsp; 덜 하겠죠?</div>
-                <p class="sub_rule">➡git commit 시 수정 날짜와 작성자의 이니셜을 적습니다.</p><br>
-                ✅질문하며 배우고 가르치며 성장합니다. <br>
-                <p class="sub_rule">➡질문 하는 것에 주저하지 않고, 설명하며 한번 더 배워 같이 성장하는 팀이 됩니다.</p>
-              </p>
-            </div>
-          </li>
-    
-          <li>
-            <div class="mtxt3">
-              <h3>우리의 목표💁</h3>
+    <section id="mainVisual">
+      <!-- mainvisual -->
+      <div id="slideShow">
+        <div class="slideShow">
+          <ul class="slides">
+            <li style="margin-right: 130px">
+              <div class="mtxt">
+                <h3 class="slogan">🔥Be the Learner, Be the Challenger🔥</h3>
+                <p class="forest">
+                  나무보다는 숲을! <br />
+                  미래지향적인 사고를 추구하는 iNtution(직관)형 MBTI를 가진 저희가 뭉쳤습니다!<br />
+                  4조 Nㅣ베아가 궁금하지 않으신가요?👀✨
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class="mtxt2">
+                <h3>우리의 약속✍</h3>
+                <div>
+                  <div class="rule">✅시간은 금이다! 팀원들의 시간은 소중해요.</div>
+                  <p class="sub_rule">
+                    ➡시간 약속을 반드시 지킵니다.불가피한 상황엔 반드시 연락해서 <br />
+                    팀원들에게 미리 알려요!
+                  </p>
+                  <div class="rule2">✅아직은 시작단계!누가 언제 수정했는지 알면 혼선이 &nbsp;&nbsp; 덜 하겠죠?</div>
+                  <p class="sub_rule">➡git commit 시 수정 날짜와 작성자의 이니셜을 적습니다.</p>
+                  <br />
+                  ✅질문하며 배우고 가르치며 성장합니다. <br />
+                  <p class="sub_rule">➡질문 하는 것에 주저하지 않고, 설명하며 한번 더 배워 같이 성장하는 팀이 됩니다.</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="mtxt3">
+                <h3>우리의 목표💁</h3>
                 <div class="goal">팀니베아는 포기 하지 않습니다!</div>
-              <p>
-                서로 서로 이끌어가며 이번 팀 프로젝트를 <p class="goal_sub">무사히 마무리하고,</p>
-                4개월 후에는 한층 성장한 모습으로 다시 <p class="goal_sub"> 만나는 것이 저희의 목표입니다.</p> <br>
-              </p>
-            </div>
-          </li>
-    
-          <li>
-            <h3 class="will">각오 한마디!❤️‍🔥</h3>
-            <table class="table" >
-              <th>이름</th>
-              <th>내용</th>
-              <tr>
-                <td class="name">📍김재혁 :</td>
-                <td>탄탄한 기본기를 다져 한발 더 앞서 나가자!</td>
-              </tr>
-              <tr>
-                <td class="name">📍배병일 :</td>
-                <td>낙오되는 사람 없이 서로 도우며 성장하자!</td>
-              </tr>
-              <tr>
-                <td class="name">📍장두혁 :</td>
-                <td>함께 배우며 목표하는 바로 발전시켜 나가자 !</td>
-              </tr>
-              <tr>
-                <td class="name">📍오준석 :</td>
-                <td>같이 공부하며 끝없이 배워나가자!</td>
-              </tr>
-              <tr>
-                <td class="name">📍조윤주 :</td>
-                <td>서로 이끌고 격려하여 포기말자!</td>
-              </tr>
-            </table>
-          </li>
-        </ul>
-      </div>
-      <p class="controller">
-        
-        <!-- arrow -->
-        <span class="prev">&lang;</span>
-        <span class="next">&rang;</span>
-      </p>
-    </div>
-  </div>
-    
-  </section>
-  <!-- main -->
-  <main id="container" class="main">
+                <div>
+                  서로 서로 이끌어가며 이번 팀 프로젝트를
+                  <p class="goal_sub">무사히 마무리하고,</p>
+                  4개월 후에는 한층 성장한 모습으로 다시
+                  <p class="goal_sub">만나는 것이 저희의 목표입니다.</p>
+                  <br />
+                </div>
+              </div>
+            </li>
 
-    <div class="top">
-      <div class="card c1">
-        <a href="../detail?query={{info[0].name}}" class="btn btn-primary">
-            <img src="https://ca.slack-edge.com/T043597JK8V-U055KTAULS2-604b89ef95eb-512" class="card-img-top" alt="jh">
+            <li>
+              <h3 class="will">각오 한마디!❤️‍🔥</h3>
+              <table class="table">
+                <th>이름</th>
+                <th>내용</th>
+                <tr>
+                  <td class="name">📍김재혁 :</td>
+                  <td>탄탄한 기본기를 다져 한발 더 앞서 나가자!</td>
+                </tr>
+                <tr>
+                  <td class="name">📍배병일 :</td>
+                  <td>낙오되는 사람 없이 서로 도우며 성장하자!</td>
+                </tr>
+                <tr>
+                  <td class="name">📍장두혁 :</td>
+                  <td>함께 배우며 목표하는 바로 발전시켜 나가자 !</td>
+                </tr>
+                <tr>
+                  <td class="name">📍오준석 :</td>
+                  <td>같이 공부하며 끝없이 배워나가자!</td>
+                </tr>
+                <tr>
+                  <td class="name">📍조윤주 :</td>
+                  <td>서로 이끌고 격려하여 포기말자!</td>
+                </tr>
+              </table>
+            </li>
+          </ul>
+        </div>
+        <p class="controller">
+          <!-- arrow -->
+          <span class="prev">&lang;</span>
+          <span class="next">&rang;</span>
+        </p>
+      </div>
+    </section>
+    <!-- main -->
+    <main id="container" class="main">
+      <div class="top">
+        <div class="card c1">
+          <a href="../detail?query={{info[0].name}}" class="btn btn-primary">
+            <img src="https://ca.slack-edge.com/T043597JK8V-U055KTAULS2-604b89ef95eb-512" class="card-img-top" alt="jh" />
             <div class="card-body">
-              <h5 class="card-title">김재혁 <br> 앞서나가되 기본에 충실하자! </h5>
+              <h5 class="card-title">
+                김재혁 <br />
+                앞서나가되 기본에 충실하자!
+              </h5>
               <p class="card-text">click This Card 🙌</p>
             </div>
-        </a>
+          </a>
+        </div>
+        <div class="card c2">
+          <a href="../detail?query={{info[1].name}}" class="btn btn-primary">
+            <img src="https://ca.slack-edge.com/T043597JK8V-U056JF99DKJ-676687d724d8-48" class="card-img-top" alt="bi" />
+            <div class="card-body">
+              <h5 class="card-title">
+                배병일 <br />
+                서로 도와가면서잘하자
+              </h5>
+              <p class="card-text">click This Card 🙌</p>
+            </div>
+          </a>
+        </div>
+        <div class="card c3">
+          <a href="../detail?query={{info[2].name}}" class="btn btn-primary">
+            <img src="https://res.cloudinary.com/dyhnnmhcf/image/upload/v1681745025/profileImage_ny0a9b.jpg" class="card-img-top" alt="dh" />
+            <div class="card-body">
+              <h5 class="card-title">
+                장두혁 <br />
+                다 같이 발전하자!
+              </h5>
+              <p class="card-text">click This Card 🙌</p>
+            </div>
+          </a>
+        </div>
       </div>
-      <div class="card c2">
-        <a href="../detail?query={{info[1].name}}" class="btn btn-primary">
-          <img src="https://ca.slack-edge.com/T043597JK8V-U056JF99DKJ-676687d724d8-48" class="card-img-top" alt="bi">
-          <div class="card-body">
-            <h5 class="card-title">배병일 <br> 서로 도와가면서잘하자</h5>
-            <p class="card-text">click This Card 🙌</p>
-          </div>
-        </a>
+
+      <div class="bottom">
+        <div class="card c4">
+          <a href="../detail?query={{info[3].name}}" class="btn btn-primary">
+            <img src="https://ca.slack-edge.com/T043597JK8V-U052RS66N4C-de4e3d968e31-512" class="card-img-top" alt="js" />
+            <div class="card-body">
+              <h5 class="card-title">
+                오준석 <br />
+                같이 열심히 많이 배우면 좋겠습니다!
+              </h5>
+              <p class="card-text">click This Card 🙌</p>
+            </div>
+          </a>
+        </div>
+        <div class="card c5">
+          <a href="../detail?query={{info[4].name}}" class="btn btn-primary">
+            <img src="https://ca.slack-edge.com/T043597JK8V-U054YB2HEPL-ebccd1544fbc-512" class="card-img-top" alt="yj" />
+            <div class="card-body">
+              <h5 class="card-title">
+                조윤주 <br />
+                서로 이끌면서 포기하지말자!
+              </h5>
+              <p class="card-text">click This Card 🙌</p>
+            </div>
+          </a>
+        </div>
       </div>
-      <div class="card c3">
-        <a href="../detail?query={{info[2].name}}" class="btn btn-primary">
-          <img src="https://res.cloudinary.com/dyhnnmhcf/image/upload/v1681745025/profileImage_ny0a9b.jpg" class="card-img-top" alt="dh">
-          <div class="card-body">
-            <h5 class="card-title">장두혁 <br> 다 같이 발전하자!</h5>
-            <p class="card-text">click This Card 🙌</p>
-          </div>
-        </a>
-      </div>
-    </div>
+    </main>
 
-    <div class="bottom">
-      <div class="card c4">
-        <a href="../detail?query={{info[3].name}}" class="btn btn-primary">
-          <img src="https://ca.slack-edge.com/T043597JK8V-U052RS66N4C-de4e3d968e31-512" class="card-img-top" alt="js">
-          <div class="card-body">
-            <h5 class="card-title">오준석 <br> 같이 열심히 많이 배우면 좋겠습니다!</h5>
-            <p class="card-text">click This Card 🙌</p>
-          </div>
-        </a>
-      </div>
-      <div class="card c5">
-        <a href="../detail?query={{info[4].name}}" class="btn btn-primary">
-          <img src="https://ca.slack-edge.com/T043597JK8V-U054YB2HEPL-ebccd1544fbc-512" class="card-img-top" alt="yj">
-          <div class="card-body">
-            <h5 class="card-title">조윤주 <br> 서로 이끌면서 포기하지말자!</h5>
-            <p class="card-text">click This Card 🙌</p>
-          </div>
-        </a>
-      </div>
-    </div>
+    <!-- footer -->
+    <footer id="footer">
+      <p>design by Team.NIVEA</p>
+    </footer>
 
-  </main>
-
-  <!-- footer -->
-  <footer id="footer">
-    <p>design by Team.NIVEA</p>
-
-  </footer>
-  
-  
-
-
-  <!-- script part -->
-  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="{{ url_for('static', filename='/js/main.js') }}" defer></script>
-  <script src="{{ url_for('static', filename='/js/mainVisual.js') }}" defer></script>
-  <script src="{{ url_for('static', filename='/js/navBar.js') }}" defer></script>
-  <script src="{{ url_for('static', filename='/js/weather.js') }}" defer></script>
+    <!-- script part -->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='/js/main.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='/js/mainVisual.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='/js/navBar.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='/js/weather.js') }}" defer></script>
   </body>
 </html>
