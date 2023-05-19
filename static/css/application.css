@@ -1,119 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+body {
+  font-family: "Gowun Dodum", sans-serif;
+  font-weight: 600;
+}
+
 #check-btn {
-    display: none;
-  }
-  #check-btn:checked ~ .menubars {
-    display: block;
-  }
-  .menubars {
-    display: none;
-  }
-  
-  #login-form {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 30px;
-  }
-  #login-form input {
-    background-color: #f7f7f7;
-    padding: 15px 0px;
-    border: none;
-    font-size: 12px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    margin-bottom: 25px;
-    transition: border-color 0.8s ease-in-out;
-    text-align: center;
-    width: 300px;
-    margin-top: 10px;
-  }
-  #login-form input:not([type="submit"]) {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    transition: border-color 0.8s ease-in-out;
-  }
-  
-  #login-form input::placeholder {
-    color: rgba(0, 0, 0, 0.4);
-  }
-  #login-form input:focus {
-    border-color: var(--yellow);
-    border-width: 2px;
-  }
-  #login-form input[type="submit"] {
-    background-color: var(--yellow);
-    cursor: pointer;
-    padding: 20px 0px;
-    border-radius: 5px;
-  }
-  #login-form a {
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    font-size: 13px;
-  }
-  
-  .menubars {
-    margin-top: 20px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  a:visited {
-    text-decoration: none;
-  }
-  @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
-  
-  body {
-    text-align: center;
-    padding: 100px;
-  
-    display: table-cell;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .w-btn {
-    position: relative;
-    border: none;
-    display: inline-block;
-    padding: 15px 30px;
-    border-radius: 15px;
-    font-family: "paybooc-Light", sans-serif;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.25s;
-  }
-  
-  .w-btn-outline {
-    position: relative;
-    padding: 15px 30px;
-    border-radius: 15px;
-    font-family: "paybooc-Light", sans-serif;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.25s;
-  }
-  /**버튼**/
-  
-  .w-btn-indigo {
-    background-color: aliceblue;
-    color: #1e6b7b;
-  }
-  
-  .w-btn-indigo-outline {
-    border: 3px solid aliceblue;
-    color: #1e6b7b;
-  }
-  
-  .w-btn-indigo-outline:hover {
-    color: #1e6b7b;
-    background: aliceblue;
-  }
-  
-  .w-btn-indigo:active {
-    transform: scale(1.1);
-  }
-  
+  display: none;
+}
+#check-btn:checked ~ .menubars {
+  display: block;
+}
+.menubars {
+  display: none;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+#login-form input {
+  background-color: #f7f7f7;
+  padding: 15px 0px;
+  border: none;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+  transition: border-color 0.8s ease-in-out;
+  text-align: center;
+  width: 300px;
+  margin-top: 10px;
+}
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.8s ease-in-out;
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+#login-form input:focus {
+  border-color: var(--yellow);
+  border-width: 2px;
+}
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
+}
+
+.menubars {
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+}
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+body {
+  text-align: center;
+  padding: 100px;
+
+  display: table-cell;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.w-btn {
+  position: relative;
+  border: none;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.w-btn-outline {
+  position: relative;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+/**버튼**/
+
+.w-btn-indigo {
+  background-color: aliceblue;
+  color: #1e6b7b;
+}
+
+.w-btn-indigo-outline {
+  border: 3px solid aliceblue;
+  color: #1e6b7b;
+}
+
+.w-btn-indigo-outline:hover {
+  color: #1e6b7b;
+  background: aliceblue;
+}
+
+.w-btn-indigo:active {
+  transform: scale(1.1);
+}

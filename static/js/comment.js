@@ -45,20 +45,21 @@ function show_comment() {
         let group = rows[i]["group"];
         // console.log(rows)
         // ${name} = rows[i]['name'] , ${id} = rows[i]['_id']
-        let temp_html = ` <div class="card">
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
-      <p>${comment}</p>
-      <footer class="blockquote-footer">${group}조 ${name}</footer>
+        let temp_html = `
+        <div class="mycard" >
+          <div class="my-card-body">
+            <div class="blockquote mb-0">
+              <p>${comment}</p>
+              <footer class="blockquote-footer">${group}조 ${name}</footer>
 
-    </blockquote>
-    <div class="delete_button_box">
-        <button onclick="delete_list(${id})" id="delete_button" type="button" class="btn btn-danger">
-          삭제
-        </button>
-      </div>
-  </div>
-</div>`;
+            </div>
+            <div class="delete_button_box">
+                <button onclick="delete_list(${id})" id="delete_button" type="button" class="btn btn-danger">
+                  삭제
+                </button>
+              </div>
+          </div>
+        </div>`;
 
         $("#comment-list").append(temp_html);
       }

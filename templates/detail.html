@@ -15,11 +15,53 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/detail.css') }}" />
     <!-- comment css -->
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/comment.css') }}" />
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/nav.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <h1 onclick="onClickHomeBtn()" style="cursor: pointer">home</h1>
+
+        
+    <header id="header">
+  
+      <!-- sideNav start -->
+      <div class="l-navbar" id="navbar">
+        <nav class="nav">
+          <div>
+            <div class="nav__brand">
+                <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                <a href="/" class="nav__logo">Team.Nivea</a>
+            </div>
+            <div class="nav__list">
+              <a href="/" class="nav__link active">
+                <ion-icon name="home-outline"></ion-icon>
+                <span class="nav_name">&nbsp;Home</span>
+              </a>
+              <a href="https://github.com/tuy112/nivea-Team" class="nav__link githublink">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                  <span class="nav_name">&nbsp;Contact Us</span>
+              </a>
+              <a href="../comment" class="nav__link">
+                  <ion-icon name="logo-octocat"></ion-icon>
+                  <span class="nav_name">&nbsp;Cheer UP</span>
+              </a>
+    
+              <a href="../sendEmail" class="nav__link">
+                  <ion-icon name="airplane-sharp"></ion-icon>
+                  <span class="nav_name">&nbsp;Send Email</span>
+              </a>
+    
+              <a href="../application" class="nav__link">
+                  <ion-icon name="heart-outline"></ion-icon>
+                  <span class="nav_name">&nbsp;Nivea에 합류하기</span>
+              </a>
+          </div>
+        </nav>
+      </div>
+    
+    </header>
+
+    
     <div class="container" style="width: 80vw; margin: 5rem auto">
       <div class="row row-cols-1 row-cols-lg-2 mb-8 mb-lg-4" style="align-items: center">
         <div class="col mb-4 mb-lg-0" style="width: 300px; margin: auto">
@@ -27,7 +69,7 @@
         </div>
         <div class="col" style="width: 400px; margin: auto">
           <div class="input-group">
-            <p class="card-text">{{info[0].reason}}</p>
+            <p class="card-text" style="border: solid 6px; border-style: inset;">{{info[0].reason}}</p>
           </div>
         </div>
       </div>
@@ -62,21 +104,24 @@
         </div>
       </div>
     </div>
-    <div class="mypost">
-      <div class="input-group">
-        <input required id="group" placeholder="-팀명을 입력하세요-" type="text" />
-        <input required id="name" placeholder="-이름을 입력하세요-" type="text" min="2" />
-      </div>
-      <div class="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="comment" style="height: 100px"></textarea>
-        <label for="floatingTextarea2">응원의 한마디!🎉</label>
-      </div>
-      <div class="button_box">
-        <button id="comment_save" onclick="save_comment()" type="button" class="btn btn-dark">댓글 남기기📝</button>
-      </div>
-    </div>
-    <div class="mycards" id="comment-list"></div>
+    <div>
 
+      <div class="mypost">
+        <div class="input-group">
+          <input required id="group" placeholder="-팀명을 입력하세요-" type="text" />
+          <input required id="name" placeholder="-이름을 입력하세요-" type="text" min="2" />
+        </div>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="comment" style="height: 100px"></textarea>
+          <label for="floatingTextarea2">응원의 한마디!🎉</label>
+        </div>
+        <div class="button_box">
+          <button id="comment_save" onclick="save_comment()" type="button" class="btn btn-dark">댓글 남기기📝</button>
+        </div>
+      </div>
+      <div class="mycards" id="comment-list"></div>
+
+    </div>  
 
     
     <!-- script part -->
@@ -84,5 +129,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='/js/detail.js') }}" defer></script>
     <script src="{{ url_for('static', filename='/js/comment.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='/js/navBar.js') }}" defer></script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
   </body>
 </html>
