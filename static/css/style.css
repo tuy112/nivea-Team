@@ -107,8 +107,8 @@ a.hover {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
-.card div:hover:not(.card-body) {
-  scale: 110%;
+.card:hover {
+  scale: 105%;
 }
 .card a {
   cursor: pointer;
